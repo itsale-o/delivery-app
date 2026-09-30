@@ -1,0 +1,35 @@
+.navbar {
+    background-color: var(--primary);
+    color: white;
+    padding: 2rem 10px;
+    margin-bottom: 1rem;
+}
+
+.titulo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.titulo p {
+    font-weight: bold;
+}
+
+.input-group {
+    position: relative;
+    width: 100%;
+}
+
+.input-group input {
+    width: 100%;
+}
+
+.input-group i {
+    position: absolute;
+    left: calc(96% - 12px);
+    top: 40%;
+    font-size: 14px;
+    transform: translateY(-50%);
+    color: var(--secondary-color);
+}

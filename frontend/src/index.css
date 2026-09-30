@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+:root {
+  --primary: #C10000;
+  --title-color: #323232;
+  --secondary-color: #A1A1A1;
+  --font-family: "Nunito", sans-serif;
+
+  /* Config botões */
+  --radius-elements: 4px;
+  --btn-fb: #3B5998;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+}
+
+#root {
+  max-width: 375px;
+  height: 100vh;
+  min-height: 100vh;
+  margin: auto;
+}
+
+input {
+  padding: 12px;
+}
+
+input::placeholder {
+  color: var(--secondary-color);
+}
+
+input:active, input:focus {
+  outline: none;
+}
+
+input, button {
+  border-radius: var(--radius-elements);
+  border: none;
+}
+
+button {
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+}
