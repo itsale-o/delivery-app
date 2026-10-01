@@ -39,14 +39,37 @@
     margin-top: 12px;
 }
 
-.avaliacao i {
+.avaliacao {
+    display: flex;
+    gap: 2px;
+}
+
+.estrela {
+    position: relative;
+    color: #D1D5DB;
+}
+
+.estrela i {
     width: 13px;
     height: 13px;
-    color: #FFCB0C;
 }
+
+.estrela::before {
+    content: "\F586";
+    font-family: "bootstrap-icons";
+    position: absolute;
+    top: 0.101rem;
+    left: 0;
+    width: var(--preenchimento);
+    height: 100%;
+    overflow: hidden;
+    color: #FFCB0C;
+    white-space: nowrap;
+}
+
 
 .preco {
     font-weight: bold;
     font-size: 12px;
     color: var(--primary);
-}
+} 

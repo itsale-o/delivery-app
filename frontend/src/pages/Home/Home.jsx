@@ -36,7 +36,7 @@ export default function Home() {
             imageAlt: "Legítimo Pastel",
             title: "Legítimo Pastel",
             text: "Pastel do Léo",
-            rating: 4,
+            rating: 4.5,
             price: "R$ 8,00"
         },
         {
