@@ -8,6 +8,7 @@
 
   /* Config botões */
   --radius-elements: 4px;
+  --radius-elements-md: 6px; 
   --btn-fb: #3B5998;
 }
 
@@ -49,6 +50,11 @@ button {
   cursor: pointer;
 }
 
-.padding-padrao {
+.layout {
+  min-height: 100%;
+  border: solid 1px var(--primary);
+}
+
+.layout main {
   padding: 0 10px;
 }

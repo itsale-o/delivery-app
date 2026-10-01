@@ -1,0 +1,52 @@
+.card {
+    width: 165px;
+    height: 180px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border-radius: var(--radius-elements);
+    margin-bottom: 1rem;
+}
+
+.card-img-top {
+    width: 165px;
+    height: 102px;
+    border-top-left-radius: var(--radius-elements);
+    border-top-right-radius: var(--radius-elements);
+}
+
+.card-body {
+    padding: 6px;
+    padding-top: 0;
+}
+
+.card-title {
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--title-color);
+}
+
+.card-text {
+    font-size: 12px;
+    color: var(--secondary-color);
+    font-weight: normal;
+}
+
+.precificacao {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 12px;
+}
+
+.avaliacao i {
+    width: 13px;
+    height: 13px;
+    color: #FFCB0C;
+}
+
+.preco {
+    font-weight: bold;
+    font-size: 12px;
+    color: var(--primary);
+}
