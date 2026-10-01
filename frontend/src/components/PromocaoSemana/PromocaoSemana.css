@@ -1,6 +1,42 @@
+.promocao-semana {
+    margin-bottom: 1rem;
+}
+
 .promocao-semana p {
     font-weight: bold;
     font-size: 16px;
     color: var(--title-color);
     margin-bottom: .5rem;
+}
+
+.banner {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    background-image: linear-gradient(rgba(0, 0, 0, .6)), url("../../assets/fundo-banner.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 140px;
+    color: white;
+    padding: .5rem;
+}
+
+.banner p {
+    display: flex;
+    flex-direction: column;
+}
+
+.banner button {
+    width: 107px;
+    height: 25px;
+    background-color: var(--primary);
+}
+
+.banner p, .banner span, .banner button {
+    color: white;
+}
+
+.banner span {
+    font-weight: normal;
 }

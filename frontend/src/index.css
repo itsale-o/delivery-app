@@ -48,3 +48,7 @@ button {
   font-size: 14px;
   cursor: pointer;
 }
+
+.padding-padrao {
+  padding: 0 10px;
+}

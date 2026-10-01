@@ -4,10 +4,9 @@ import Footer from "../../components/Footer/Footer";
 
 export default function Home() {
     return (
-        <>
+        <div className="home">
             <Navbar></Navbar>
             <PromocaoSemana></PromocaoSemana>
-            <Footer></Footer>
-        </>
+        </div> 
     )
 }

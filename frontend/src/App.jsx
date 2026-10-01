@@ -4,6 +4,7 @@ import Home from "./pages/Home/Home";
 import Cardapio from "./components/Cardapio/Cardapio";
 import Carrinho from "./components/Carrinho/Carrinho";
 import Pedidos from "./components/Pedidos/Pedidos";
+import Layout from "./components/Layout/Layout";
 import './App.css'
 
 function App() {
@@ -11,10 +12,14 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Login />} />
-        <Route path="/inicio" element={<Home />} />
-        <Route path="/cardapio" element={<Cardapio />} />
-        <Route path="/carrinho" element={<Carrinho />} />
-        <Route path="/pedidos" element={<Pedidos />} />
+
+        <Route element={<Layout />}>
+          <Route path="/inicio" element={<Home />} />
+          {/* 
+          <Route path="/cardapio" element={<Cardapio />} />
+          <Route path="/carrinho" element={<Carrinho />} />
+          <Route path="/pedidos" element={<Pedidos />} /> */}
+        </Route>
       </Routes>
     </BrowserRouter>
   )
