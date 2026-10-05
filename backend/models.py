@@ -1,0 +1,62 @@
+from sqlalchemy import create_engine, Column, String, Integer, Boolean, Float, ForeignKey
+from sqlalchemy.orm import declarative_base
+
+
+db = create_engine("sqlite:///banco.db")
+Base = declarative_base()
+
+class Usuario(Base):
+    __tablename__ = "usuarios"
+
+    id = Column("id", Integer, primary_key=True, autoincrement=True)
+    nome = Column("nome", String)
+    email = Column("email", String, nullable=False)
+    senha = Column("senha", String)
+    ativo = Column("ativo", Boolean)
+    admin = Column("admin", Boolean, default=False)
+
+    def __init__(self, nome, email, senha, ativo=True, admin=False):
+        self.nome = nome
+        self.email = email
+        self.senha = senha
+        self.ativo = ativo
+        self.admin = admin
+
+
+class Pedido(Base):
+    __tablename__ = "pedidos"
+
+    # STATUS_PEDIDOS = (
+    #     ("pendente", "PENDENTE"),
+    #     ("cancelado", "CANCELADO"),
+    #     ("finalizado", "FINALIZADO")
+    # )
+
+    id = id = Column("id", Integer, primary_key=True, autoincrement=True)
+    status = Column("status", String)
+    usuario = Column("usuario", ForeignKey("usuarios.id"))
+    preco_total = Column("preco_total", Float)
+    # itens
+
+    def __init__(self, usuario, status="pendente", preco_total=0):
+        self.status = status
+        self.usuario = usuario
+        self.preco_total = preco_total
+
+
+class ItensPedido(Base):
+    __tablename__ = "itens_pedido"
+
+    id = id = Column("id", Integer, primary_key=True, autoincrement=True)
+    quantidade_itens = Column("quantidade_itens", Integer)
+    sabor = Column("sabor", String)
+    tamanho = Column("tamanho", String)
+    preco_unitario = Column("preco_unitario", Float)
+    pedido = Column("pedido", ForeignKey("pedidos.id"))
+
+    def __init__(self, quantidade, sabor, tamanho, preco_unitario, pedido):
+        self.quantidade = quantidade
+        self.sabor = sabor
+        self.tamanho = tamanho
+        self.preco_unitario = preco_unitario
+        self.pedido = pedido
