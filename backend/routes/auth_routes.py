@@ -5,7 +5,7 @@ from dependencies import session_db, verificar_token
 from main import bcrypt_context, ALGORITHM, ACCESS_TOKEN_EXPIRE_MINUTES, SECRET_KEY
 from schemas import UsuarioSchema, LoginSchema
 from sqlalchemy.orm import Session
-from jose import jwt, JWTError
+from jose import jwt
 from datetime import datetime, timedelta, timezone
 
 auth_router = APIRouter(prefix="/autenticacao", tags=["autenticacao"])
