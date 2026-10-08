@@ -39,12 +39,14 @@ input:active, input:focus {
   outline: none;
 }
 
-input, button {
+
+input, button, .btn-acao {
   border-radius: var(--radius-elements);
   border: none;
 }
 
-button {
+button, .btn-acao {
+  text-decoration: none;
   font-weight: bold;
   font-size: 14px;
   cursor: pointer;

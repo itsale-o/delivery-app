@@ -1,0 +1,60 @@
+.login-div {
+    height: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, .5)), url("../../assets/fundo-login.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-section {
+    margin-top: 2rem;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    margin-bottom: 1rem;
+}
+
+.btn-group {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+button {
+    color: white;
+}
+
+input, button {
+    width: 282px;
+    height: 43px;
+}
+
+button {
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.btn-criar-conta {
+    background: var(--primary);  
+}
+
+.btn-login-fb {
+    background-color: var(--btn-fb);
+}
+
+.btn-login-fb i {
+    margin-right: 4px;
+}
